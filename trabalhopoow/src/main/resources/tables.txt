@@ -1,0 +1,23 @@
+CREATE TABLE livro (
+    id SERIAL PRIMARY KEY,
+    titulo VARCHAR(30),
+    autor VARCHAR(30),
+    ano_publicacao INT,
+    disponivel BOOLEAN
+);
+
+CREATE TABLE cliente (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(30),
+    cpf VARCHAR(15),
+    telefone VARCHAR(15),
+    endereco VARCHAR(50)
+);
+
+CREATE TABLE funcionario(
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(30),
+    email VARCHAR(30),
+    senha VARCHAR(30),
+    ativo boolean
+);
