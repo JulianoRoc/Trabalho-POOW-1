@@ -39,7 +39,7 @@ public class FuncionarioDAO {
                 funcionarios.add(f);
             }
         } catch (SQLException e) {
-            System.out.println("Erro ao conectar");
+            System.out.println("Erro ao listar funcionario");
             e.printStackTrace();
         } catch (ClassNotFoundException ex) {
             System.out.println("Drive não carregou");
@@ -101,6 +101,31 @@ public class FuncionarioDAO {
             System.out.println(e.getMessage());
             System.out.println("Erro ao buscar funcionario");
         }
+        return funcionario;
+    }
+
+    public Funcionario buscar(String email) {
+        Funcionario funcionario = new Funcionario();
+
+        try {
+            Connection conn = ConectarBancoDados.conectarBancoPostgres();
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM funcionario WHERE email = ?");
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                funcionario.setId(rs.getInt("id"));
+                funcionario.setNome(rs.getString("nome"));
+                funcionario.setEmail(rs.getString("email"));
+                funcionario.setSenha(rs.getString("senha"));
+                funcionario.setAtivo(rs.getBoolean("ativo"));
+            }
+
+        } catch (SQLException | ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Erro ao buscar funcionario");
+        }
+
         return funcionario;
     }
 }

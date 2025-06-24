@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Dashboard</title>
+        <title>Dashbord</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     </head>
 
@@ -20,8 +20,11 @@
                 <li class="list-group-item bg-secondary text-light mb-2 rounded">
                     <a href="livro" class="text-light text-decoration-none">Cadastro de Livros</a>
                 </li>
-                <li class="list-group-item bg-secondary text-light rounded">
+                <li class="list-group-item bg-secondary text-light mb-2 rounded">
                     <a href="cliente" class="text-light text-decoration-none">Cadastro de Clientes</a>
+                </li>
+                <li class="list-group-item bg-secondary text-light mb-2 rounded">
+                    <a href="emprestimos" class="text-light text-decoration-none">Cadastro de Emprestimos</a>
                 </li>
             </ul>
         </main>

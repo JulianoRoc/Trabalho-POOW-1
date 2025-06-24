@@ -22,13 +22,16 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
+                                    <a class="nav-link" href="funcionario">Funcionários</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="livro">Livros</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Clientes</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="funcionario">Funcionários</a>
+                                    <a class="nav-link" href="emprestimos">Emprestimos</a>
                                 </li>
                             </ul>
                         </div>

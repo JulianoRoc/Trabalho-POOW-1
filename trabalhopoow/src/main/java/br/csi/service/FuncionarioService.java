@@ -8,13 +8,11 @@ public class FuncionarioService {
     private static FuncionarioDAO dao = new FuncionarioDAO();
 
     public String excluir(int id){
-
         if(dao.excluir(id)){
             return "Sucesso ao excluir funcionario";
         }else{
             return "Erro ao excluir funcionario";
         }
-
     }
 
     public ArrayList<Funcionario> listar(){ return dao.listar(); }
@@ -22,6 +20,8 @@ public class FuncionarioService {
     public Funcionario buscar(int funcionarioId) {
         return dao.buscar(funcionarioId);
     }
+
+    public Funcionario buscar(String email) { return dao.buscar(email); }
 
     public String alterar(Funcionario funcionario) {
         return dao.alterar(funcionario);

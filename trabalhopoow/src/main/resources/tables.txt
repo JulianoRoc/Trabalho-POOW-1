@@ -21,3 +21,18 @@ CREATE TABLE funcionario(
     senha VARCHAR(30),
     ativo boolean
 );
+
+CREATE TABLE emprestimo (
+    id SERIAL PRIMARY KEY,
+    data_emprestimo DATE,
+    data_devolucao DATE,
+    id_funcionario INT,
+    id_cliente INT,
+    id_livro INT
+);
+
+INSERT INTO funcionario (nome, email, senha, ativo) VALUES
+        ('Juliano Rocha', 'email@gmail.com', '123456', true);
+
+INSERT INTO emprestimo (data_emprestimo, data_devolucao, id_funcionario, id_cliente, id_livro) VALUES
+        ('2024-06-20', NULL, 1, 1, 1);
